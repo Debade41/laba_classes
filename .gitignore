@@ -7,3 +7,8 @@
 *.so
 *.dll
 *.dylib
+*.out
+*.elf
+*.gcda
+*.gcno
+*.gcov
