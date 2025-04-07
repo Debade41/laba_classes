@@ -1,23 +1,22 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
+
+#include <iostream>
 #include <string>
 
-class Vehicle
+class Vehicle 
 {
-    private:
-        std::string brand;
-        std::string model;
-        int releaseYear;
-    public:
-        virtual bool isGround() = 0;
-        virtual bool isMotorized() = 0;
-        virtual int maxPassengers() = 0;
-        virtual std::string type() = 0;
-
-        friend std::ostream& operator<< (std::ostream& os, const Vehicle& vehicle);
-        virtual void PrintInfo(std::ostream& os) const;
-        
-        Vehicle(std::string brand, std::string model, int releaseYear);
+protected:
+    std::string brand;
+    std::string model;
+    int releaseYear;
+public:
+    Vehicle() = default;
+    Vehicle(std::string brand, std::string model, int releaseYear);
+    virtual void PrintInfo(std::ostream& os) const = 0;
+    virtual ~Vehicle() = default;
 };
 
-#endif 
+std::ostream& operator<<(std::ostream& os, const Vehicle& vehicle);
+
+#endif
