@@ -8,7 +8,9 @@ SOURCES = main.cpp \
           $(SRCDIR)/vehicle.cpp \
           $(SRCDIR)/train.cpp \
           $(SRCDIR)/plane.cpp \
-          $(SRCDIR)/ship.cpp
+          $(SRCDIR)/ship.cpp \
+          $(SRCDIR)/bus.cpp \
+          $(SRCDIR)/car.cpp
 
 OBJECTS = $(patsubst %.cpp, $(OBJDIR)/%.o, $(notdir $(SOURCES)))
 TARGET = $(BINDIR)/main
