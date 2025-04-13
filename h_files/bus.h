@@ -8,15 +8,15 @@ class Bus : public Vehicle
 {
 private:
 
-    int passengerCapacity;      // Общее количество сидячих мест
-    int standingPlaces;         // Количество стоячих мест
-    bool hasWheelchairAccess;   // Доступность для инвалидных колясок
-    double length;              // Длина автобуса в метрах
-    std::string fuelType;       // Тип используемого топлива
-    bool hasAirConditioning;    // Наличие системы кондиционирования
-    bool hasWifi;              // Наличие WiFi подключения
-    std::string busType;        // Тип автобуса (городской, междугородний и т.д.)
-    int totalDoors;             // Количество дверей
+    int passengerCapacity;      
+    int standingPlaces;         
+    bool hasWheelchairAccess;   
+    double length;              
+    std::string fuelType;       
+    bool hasAirConditioning;    
+    bool hasWifi;              
+    std::string busType;        
+    int totalDoors;             
 
 public:
     Bus() = default;
@@ -26,10 +26,10 @@ public:
         std::string fuelType, bool hasAirConditioning, bool hasWifi,
         std::string busType, int totalDoors);
     
-    bool isGround() const override { return true; }
-    bool isMotorized() const override { return true; }
-    int maxPassengers() const override { return passengerCapacity + standingPlaces; }
-    std::string type() const override { return "BUS"; }
+    bool isGround() const { return true; }
+    bool isMotorized() const { return true; }
+    int maxPassengers() const { return passengerCapacity + standingPlaces; }
+    std::string type() const { return "BUS"; }
     virtual ~Bus() = default;
 
     void PrintInfo(std::ostream& os) const override;
